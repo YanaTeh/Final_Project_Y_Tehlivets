@@ -27,4 +27,13 @@ public class YourAccountPage {
             createNewAddress.click();
         }
     }
+
+
+    public void searchFor(String productName) {
+        WebElement searchInput = this.driver.findElement(By.cssSelector("input[placeholder=\"Search our catalog\"]"));
+        searchInput.click();
+        searchInput.clear();
+        searchInput.sendKeys(productName);
+        searchInput.submit();
+    }
 }
